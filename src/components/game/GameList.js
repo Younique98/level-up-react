@@ -12,23 +12,8 @@ export const GameList = (props) => {
   }, []);
 
   return (
-    <article className="games">
-      {games.map((game) => {
-        return (
-          <section key={`game--${game.id}`} className="game">
-            <div className="game__title">
-              {game.title} by {game.maker}
-            </div>
-            <div className="game__players">
-              {game.number_of_players} players needed
-            </div>
-            <div className="game__skillLevel">
-              Skill level is {game.skill_level}
-            </div>
-          </section>
-        );
-      })}
-      <button
+    <article className="gameHolder">
+    <button
         className="btn btn-2 btn-sep icon-create"
         onClick={() => {
           history.push({ pathname: "/games/new" });
@@ -36,6 +21,27 @@ export const GameList = (props) => {
       >
         Register New Game
       </button>
+      <article className="games">
+      {games.map((game) => {      
+        return (
+          <div className="individualGames">
+          <section key={`game--${game.id}`} className="game">
+            <div className="game__title">
+              Name of the Game: {game.name}
+            </div>
+            <div className="game__players">
+              How many players needed? {game.number_of_players}
+            </div>
+            <div className="game__type">
+              What is the type of game? {game.game_type.type}
+            </div>
+            <div className="game__skillLevel">
+              What should the skill level be of the players? {game.skill_level}
+            </div>
+          </section>
+          </div>
+        );
+      })}</article>
     </article>
   );
 };
