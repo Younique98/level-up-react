@@ -17,7 +17,7 @@ export const EventList = () => {
                 <h1>Level Up Game Events</h1>
                 <button className="btn btn-2 btn-sep icon-create"
                     onClick={() => {
-                        history.push({ pathname: "/events/new" })
+                        history.push({ pathname: "/event/new" })
                     }}
                 >Schedule New Event</button>
             </header>
