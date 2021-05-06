@@ -66,7 +66,6 @@ export const EventForm = (props) => {
     }
 
     const changeEventDateState = (event) => {
-        debugger
         const newEventState = { ...currentEvent }
         newEventState.date = event.target.value
         // let myDate = newEventState.date;
@@ -181,7 +180,6 @@ export const EventForm = (props) => {
                 onClick={evt => {
                     // Prevent form from being submitted
                     evt.preventDefault()
-debugger
                     const event = {
                         name: currentEvent.name,
                         time: currentEvent.time,

@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react"
 import { GameContext } from "./GameProvider.js"
 import { useHistory } from 'react-router-dom'
 import Select from "react-select";
+import "./Game.css"
 
 
 export const GameForm = () => {
@@ -15,7 +16,7 @@ export const GameForm = () => {
     */
     const [currentGame, setCurrentGame] = useState({
         name: "",
-        maker: "",
+        maker: localStorage.getItem("lu_token"),
         numberOfPlayers: 0,
         skillLevel: 1,
         gameTypeId: 0
@@ -93,15 +94,6 @@ export const GameForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="maker">Maker: </label>
-                    <input type="text" name="maker" required autoFocus className="form-control"
-                        value={currentGame.maker}
-                        onChange={changeGameMakerState}
-                    />
-                </div>
-            </fieldset>
-            <fieldset>
-                <div className="form-group">
                     <label htmlFor="numberOfPlayers">How many Players? </label>
                     <input type="text" name="numberOfPlayers" required autoFocus className="form-control"
                         value={currentGame.numberOfPlayers}
@@ -143,7 +135,7 @@ export const GameForm = () => {
                     evt.preventDefault()
 
                     const game = {
-                        maker: currentGame.maker,
+                        maker: localStorage.getItem("lu_token"),
                         name: currentGame.name,
                         numberOfPlayers: parseInt(currentGame.numberOfPlayers),
                         skillLevel: parseInt(currentGame.skillLevel),
