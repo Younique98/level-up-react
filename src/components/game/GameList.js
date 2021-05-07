@@ -42,6 +42,7 @@ export const GameList = (props) => {
           </div>
         );
       })}</article>
-    </article>
+ .
+     </article>
   );
 };
