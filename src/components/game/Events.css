@@ -1,1 +1,5 @@
 body {background-color: #dff3e4;}
+
+.registration {
+    display: flex
+}
