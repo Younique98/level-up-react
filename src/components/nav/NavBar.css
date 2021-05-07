@@ -35,7 +35,7 @@
     -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
 
-    width: 900px;
+    width: 1200px;
     position: relative;
     transition: all 0.7s ease;
 
@@ -62,7 +62,7 @@
   }
   
   .navbar {
-    position: sticky;
+    position: relative;
     top: 0;
     display:flex;
     overflow:hidden;

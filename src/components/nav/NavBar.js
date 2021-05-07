@@ -53,6 +53,7 @@ export const NavBar = (props) => {
  <Link className="expandHome ref"  to="/">Games</Link></li>
   <li><Link className="expandHome ref"  to="/events">Events</Link></li>
   <Link className="expandHome ref"  to="/profile">My Profile</Link>
+    <a href="https://www.linkedin.com/in/ericathompsonsmiles/" class="expandHome ref">Contact Us</a>
      <div class="subnav">
      <button class="subnavbtn">Major Gaming Locations<i class="fa fa-caret-down"></i></button>
        <div class="subnav-content">
@@ -63,7 +64,6 @@ export const NavBar = (props) => {
         </div>
        </div>
     </div>
-    <a href="https://www.linkedin.com/in/ericathompsonsmiles/" class="expandHome ref">Contact Us</a>
   
      <div class="subnav">
          <li>
